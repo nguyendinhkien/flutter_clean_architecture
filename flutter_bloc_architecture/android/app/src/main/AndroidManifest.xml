@@ -2,7 +2,6 @@
     package="com.example.flutter_bloc_architecture">
    <application
         android:label="flutter_bloc_architecture"
-        android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

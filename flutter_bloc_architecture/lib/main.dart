@@ -1,23 +1,11 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_architecture/presentation/scenes/home/home_page.dart';
+import 'package:flutter_bloc_architecture/app_injector.dart';
+import 'package:flutter_bloc_architecture/presentation/app/index.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  await initInjector();
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Clean Architecture',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
